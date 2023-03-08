@@ -33,6 +33,16 @@ public:
         else
         return 0;
     }
+    float perimeter(){
+        if (Shape_type == circle)
+            return(2*PI*_a);
+        else if (Shape_type == triangle)
+           return(_a+_b+_b);
+        else if (Shape_type == square)
+            return(_a+_a+_a+_a);
+        else
+        return 0;
+    }
 
     void print_Shape(){
         if (Shape_type == circle)
@@ -58,9 +68,12 @@ int main() {
 
    square.print_Shape();
             printf("area is %f\r\n", square.area());
+            printf("perimeter is %f\r\n", square.perimeter());
    triangle.print_Shape();
             printf("area is %f\r\n", triangle.area());
+            printf("perimeter is %f\r\n", triangle.perimeter());
    circle.print_Shape();
             printf("area is %f\r\n", circle.area());
+            printf("perimeter is %f\r\n", circle.perimeter());
 
 }
