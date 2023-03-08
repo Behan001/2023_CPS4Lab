@@ -26,18 +26,20 @@ public:
     float area(){
         if (Shape_type == circle)
             return(PI*_a*_a);
-        if (Shape_type == triangle)
+        else if (Shape_type == triangle)
            return(_a*_b*0.5);
-        if (Shape_type == square)
+        else if (Shape_type == square)
             return(_a*_a);
+        else
+        return 0;
     }
 
     void print_Shape(){
         if (Shape_type == circle)
             printf("Shape is a circle\r\n");
-        if (Shape_type == triangle)
+        else if (Shape_type == triangle)
             printf("Shape is a triangle\r\n");
-        if (Shape_type == square)
+        else if (Shape_type == square)
             printf("Shape is a square\r\n");
     }
 private:
@@ -55,11 +57,10 @@ int main() {
    Shape circle(6, 0);
 
    square.print_Shape();
-        printf("area is %f\r\n", square.area());
+            printf("area is %f\r\n", square.area());
    triangle.print_Shape();
             printf("area is %f\r\n", triangle.area());
-
    circle.print_Shape();
-           printf("area is %f\r\n", circle.area());
+            printf("area is %f\r\n", circle.area());
 
 }
